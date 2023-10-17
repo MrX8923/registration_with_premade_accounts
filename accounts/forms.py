@@ -12,7 +12,7 @@ class MyMailField(forms.EmailField):
 class SingUpForm(UserCreationForm):
     class Meta:
         model = Profile
-        fields = ('username', 'first_name', 'last_name', 'email' 'password1', 'password2', 'bio')
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'bio')
         field_classes = {'email': MyMailField}
         widgets = {
             'username': forms.TextInput(attrs={'placeholder': 'arkasha2000'}),
