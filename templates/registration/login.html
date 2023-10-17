@@ -12,6 +12,9 @@
                 <div class="m-1 {% if field.errors %} errors {% endif %}">{{ field }}</div>
             {% endfor %}
             <div class="m-1">
+                <a class="person-a" href="{% url 'password_reset' %}">Забыли пароль?</a>
+            </div>
+            <div class="m-1">
                 <button class="see-button" type="submit">Войти</button>
                 <a href="{% url 'registration' %}"><button class="see-button" type="button">Регистрация</button></a>
             </div>

@@ -33,4 +33,5 @@ class Profile(AbstractUser):
                 name="age_gte_18",
             ),
         ]
-
+        verbose_name = 'User'
+        db_table = 'user_profile'
