@@ -11,8 +11,10 @@
             <div class="m-1 {% if field.errors %} errors {% endif %}">{{ field }}</div>
         {% endfor %}
         <div class="m-1">
-            <button class="see-button"><a class="person-a" href="{% url 'registration' %}">Регистрация</a></button>
             <button class="see-button" type="submit">Войти</button>
         </div>
     </form>
+        <div>
+            <a href="{% url 'registration' %}"><button class="see-button">Регистрация</button></a>
+        </div>
 {% endblock %}
