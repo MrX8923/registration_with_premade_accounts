@@ -20,6 +20,8 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
+from accounts.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
@@ -33,5 +35,6 @@ urlpatterns = [
         extra_context={'page_title': 'Главная'}
     ),
          name='home'),
+    path('registration/', RegistrationView.as_view(), name='registration')
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
