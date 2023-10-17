@@ -7,8 +7,8 @@ from .forms import *
 
 class RegistrationView(FormView):
     form_class = SingUpForm
-    template_name = 'registration/user_registration.html'
-    success_url = reverse_lazy('user_profile')
+    template_name = 'registration/registration.html'
+    success_url = reverse_lazy('profile')
     extra_context = {'title': 'Регистрация'}
 
     def form_valid(self, form):

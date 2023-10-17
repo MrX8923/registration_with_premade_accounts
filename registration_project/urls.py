@@ -26,15 +26,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/profile', TemplateView.as_view(
-        template_name='registration/user_profile.html',
+        template_name='registration/profile.html',
         extra_context={'page_title': 'Профиль'}
     ),
-         name='user_profile'),
+         name='profile'),
     path('', TemplateView.as_view(
         template_name='index.html',
         extra_context={'page_title': 'Главная'}
     ),
          name='home'),
-    path('registration/', RegistrationView.as_view(), name='registration')
+    path('registration/', RegistrationView.as_view(), name='registration'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
